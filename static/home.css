@@ -1,0 +1,47 @@
+.carousel-item img
+{
+    height:70%;
+}
+
+.footer
+{
+    text-align: center;
+    padding-top: 30px;
+}
+.about
+{
+    text-align: center;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+.info
+{
+    padding-left: 30px;
+}
+.info span
+{
+    color: red;
+}
+.f
+{
+    font-weight: bold;
+}
+.container
+{
+    text-align: center;
+    background: ghostwhite
+}
+
+.last
+{
+    padding-left: 30px;
+}
+
+.last  li p
+{
+    color: red;
+}
+.last  li p span
+{
+    color: black;
+}

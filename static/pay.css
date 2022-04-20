@@ -1,0 +1,21 @@
+.container
+{
+    text-align: center;
+}
+h6{
+    padding-top: 20px;
+}
+h5
+{
+    padding-top: 10px;
+}
+
+a
+{
+    float: right;
+}
+
+.btn
+{
+    margin-top: 10px;
+}

@@ -1,0 +1,37 @@
+body
+{
+    height: 80vh;
+    
+}
+.third
+{
+    float: right;
+    padding-left: 20px;
+   
+}
+.second
+{
+    display: flex;
+}
+
+.form
+{
+    padding-left:250px;
+   
+    
+}
+.first
+{
+    margin-left: 10px;
+    justify-content: space-evenly;
+    
+}
+
+input
+{
+    margin-top: 50px;
+}
+.footer
+{
+    text-align: center;
+}
