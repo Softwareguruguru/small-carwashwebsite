@@ -1,0 +1,28 @@
+{% extends 'partials/base.html' %} 
+
+{% block content  %}
+<table class="table">
+    <thead>
+      <tr>
+        
+        <th scope="col">Username</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password(protected)</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      {% for data in data %}
+      <tr>
+        <td>{{data.username}}</td>
+        <td>{{data.email}}</td>
+        <td>#encrypted</td>
+      </tr>
+      {% endfor%}
+      
+     
+    </tbody>
+  </table>
+
+{% endblock  %} 
+

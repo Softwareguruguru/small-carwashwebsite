@@ -11,4 +11,6 @@ urlpatterns = [
     
     path('export_csv',views.export_csv, name="export_csv"),
     path('payment_csv',views.payment_csv, name="payment_csv"),
+    
+    path('events',views.events, name="events"),
 ]

@@ -1,3 +1,4 @@
+from multiprocessing import context
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from . models import User,Pay,Message
@@ -114,5 +115,18 @@ def payment_csv(request):
         
     response['Content_Disposition'] ='attachment;filename "payment.csv"'
     return response   
- 
+
+def events(request):
+    if 'q' in request.GET:
+        q = request.GET['q']
+        data = User.objects.filter(username__icontains=q)
+    else:
+        data = User.objects.all()
+    
+    
+    data = User.objects.all()
+    context = {
+        'data':data
+    }
+    return render(request,'events.html',context)
  
