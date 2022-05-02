@@ -1,82 +1,148 @@
-{% load static %}
-<link rel="stylesheet" href="{% static 'contacts.css'%}">
 
+{% load static %}
+<link rel="stylesheet" href="{% static 'index.css'%}">
+<!-- <h1>Hello  Happy {{name}}</h1> -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contacts</title>
+        <title>Index</title>
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-            rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-            crossorigin="anonymous">
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     </head>
     <body>
-        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-            <div class="container-fluid">
-              <a class="navbar-brand">CONTACTS</a>
-              <a class="navbar-brand" href="pay">PAY</a>
-              <a class="navbar-brand" href="home">HOME</a>
-              <a class="navbar-brand" href="login">LOGOUT</a>
-              <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
+        <header class='header'>
+            <nav class='navbar navbar-style'>
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class='navbar-toggle' data-toggle="collapse" data-target="#menu-icon">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href=""><img src="static/nc.png" alt="" class ="logo"></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="menu-icon">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="index">Home</a></li>
+                            <li><a >Features</a></li>
+                            <li><a>Pay</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="contacts">Contact us</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </nav>
+
+           
+                <h1 class="container-info">CONTACT US</h1>
+                <p class="container-info">0722556662/ 07566989855/ 012256666</p>
+                <p class="container-info">Via social media handles too: <span class="below">Scroll dowload below </span>   </p>
+            <div class="container-contact">
+                <div class="row">
+                    <div class="col-sm-6 banner-info">
+                        
+                        <div class="form">
+                            <form action="" method="POST">
+                                {%csrf_token%}
+                                <h4>Order services/send us your info</h4>
+                                <input placeholder="Number" name="number"></input><br><br>
+                                <input placeholder="Email" name="email"></input><br><br>
+                                <input placeholder="Select_service" name="select_service"></input><br><br>
+                                <input placeholder="Requirements" name="requirements"></input><br><br>
+                        
+                                <button class ="enquiry-btn" type="submit"> Send enquiry</button > 
+                            </form>
+                            
+                        </div>
+                    </div>
+                    <div class="col-sm-6 banner-image">
+                        <img src="static/phone.png" alt="" class="img-responsive"> 
+                        
+                    </div>
+                </div>
             </div>
-          </nav>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d127643.39887314352!2d36.864!3d-1.2582912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1650432631348!5m2!1sen!2ske" width="1100" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br><br>
 
-         
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d127643.39887314352!2d36.864!3d-1.2582912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1650432631348!5m2!1sen!2ske" width="1100" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br><br>
+            <h6 class="door-to-door">Door to door Service operations </h6>
+            <div class="second">
+                <p>Our team take bookings 6 <br> days a week. We come to <br>your home or workplace to <br>save you time, money and <br> provide the comfort of you <br>not having to leave your place.</p> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-          <div class="first" style="background:gainsboro;">
-              
-              <h5 style="text-align: center;">CONTACT US </h5>
-              <p>We're Here <br>To Help</p>
-              <div class="second">
-                    <p>Our team take bookings 6 <br> days a week. We come to <br>your home or workplace to <br>save you time, money and <br> provide the comfort of you <br>not having to leave your place.</p>
-                    <div class="third">
-                            <p style="color:green">Mon: 7am - 5pm <br> 
-                                Tue: 7am - 5pm <br>
-                                Wed: 7am - 5pm <br>
-                                Thu: 7am - 5pm <br>
-                                Fri: 7am - 5pm <br>
-                                Sat: 9am - 5pm
-                            </p>
-                    </div>
-                    <div class="form">
-                        <form action="" method="POST">
-                           {%csrf_token%}
-                           <h4>Order services/send us your info</h4>
-                           <input placeholder="Number" name="number"></input><br><br>
-                           <input placeholder="Email" name="email"></input><br><br>
-                           <input placeholder="Select_service" name="select_service"></input><br><br>
-                           <input placeholder="Requirements" name="requirements"></input><br><br>
-   
-                           <button class="btn btn-outline-success" type="submit"> Send enquiry</button > 
-                        </form>
-                       
-                    </div>
-              </div>
-              
+                <div class="third">
+                        <p style="color:green">
+                            Mon: 7am - 5pm <br> 
+                            Tue: 7am - 5pm <br>
+                            Wed: 7am - 5pm <br>
+                            Thu: 7am - 5pm <br>
+                            Fri: 7am - 5pm <br>
+                            Sat: 9am - 5pm
+                        </p> 
+                </div>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <div class="third">
+                    <p style="color:green">
+                        List of vehicles we service: <br>
+                        Toyota <br> 
+                        Mercedez <br>
+                        Volvo <br>
+                        Vitz <br>
+                        Rangerover etc....<br>
+                        
+                    </p>
             </div>
         
-
-            <div class="footer">
-                <p>newlife carwash</p>
-                <p>find us also at: newlife@yahoo.ke.uk</p>
+            
+            </div>
+            
+            <div class="footer-pay">
+                <h6>newlife carwash</h6>
+                <h6>Built by Happy Blackie</h6>
+                <h6>find us also at: newlife@yahoo.ke.uk</h6>
                 <i class="bi bi-facebook">facebook</i> &nbsp;
                 <i class="bi bi-whatsapp">whatsapp</i> &nbsp;   
                 <i class="bi bi-instagram">instagram</i>
               
             </div>
-          
+
+            
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-        
-
-      
     </body>
+
 </html>
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+

@@ -8,10 +8,10 @@ import csv
 
 # Create your views here.
 def index(request):
-    context = {
-        'name' : 'B'     
-    }
-    return render(request,'index.html', context)
+    #context = {
+        #'name' : 'B'     
+   # }
+    return render(request,'index.html') #context
 
 
 def register(request):
